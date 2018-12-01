@@ -8,14 +8,59 @@
 		<meta name="keywords" content="słowa, klucze, słowa kluczowe"/>
 		<meta https-equiv="X-UA-COmpatible" content="IE-edge,chrome=1"/>
 
-		<link rel="stylesheet" type="text/css" href="style.css" />
-		<script src="script.js" async></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script src="javascript/script.js" async></script>
 
+		 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
 	</head>
 
 	<body>
 		
-		
+		<header>
+			<nav>
+				<ul>
+					<a href="index.html"><li>Strona główna</li></a>
+					<a href="oferta.html"><li>Oferta</li></a>
+					<a href="wypozyczalnia.html"><li>Wypożyczalnia</li></a>
+					<a href="kontakt.html"><li>Kontakt</li></a>
+				</ul>
+			</nav>
+		</header>
+
+		<article>
+			<div class="slideshow-container">
+
+			  <div class="mySlides fade">
+			    <div class="numbertext">1 / 3</div>
+			    <img src="css/baner.png" style="width:100%; height: 220px;">
+			    <div class="text">Caption Text</div>
+			  </div>
+
+			  <div class="mySlides fade">
+			    <div class="numbertext">2 / 3</div>
+			    <img src="css/iantd.gif" style="width:100%; height: 220px;">
+			    <div class="text">Caption Two</div>
+			  </div>
+
+			  <div class="mySlides fade">
+			    <div class="numbertext">3 / 3</div>
+			    <img src="css/logo-iantd.gif" style="width:100%; height: 220px;">
+			    <div class="text">Caption Three</div>
+			  </div>
+
+			  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+			</div>
+			<br>
+
+			<div style="text-align:center">
+			  <span class="dot" onclick="currentSlide(1)"></span>
+			  <span class="dot" onclick="currentSlide(2)"></span>
+			  <span class="dot" onclick="currentSlide(3)"></span>
+			</div>
+		</article>
+
+		<div style="clear: both;"></div>
 		
 	</body>
 
