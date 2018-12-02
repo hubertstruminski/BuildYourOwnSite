@@ -51,32 +51,23 @@ ul a:hover
 {
 	color: #c12c2c;
 }
-section
-{
-  max-width: 1200px;
-  color: white;
-  font-size: 32px;
-  text-align: justify;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 3em;
-
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
 }
-h1
+th, td
 {
+  padding: 16px;
   text-align: center;
-  margin-bottom: 2em;
-  letter-spacing: 4px;
-  font-size: 56px;
 }
-#list
-{
-  float: left;
+
+tr:nth-child(even) {
+    background-color: #f2f2f2
 }
-#imgBaner
-{
-  margin-left: 2em;
-  float: left;
+tr:nth-child(odd){
+  background-color: #b2b5ba;
 }
 footer
 {
@@ -90,6 +81,18 @@ footer
   line-height: 350%;
   text-align: center;
   margin-top: 2em;
+}
+section
+{
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+h1
+{
+  font-size: 48px;
+  color: white;
 }
 
 /*-------------------------SLIDER-----------------------------*/
