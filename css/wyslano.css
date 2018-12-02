@@ -65,7 +65,7 @@ footer
 article
 {
   width: 500px;
-  height: 650px;
+  height: 400px;
   background-color: black;
   opacity: 0.9;
   margin-right: auto;
@@ -92,59 +92,5 @@ h2
   font-size: 48px;
   margin-top: 2em;
 }
-input[type="text"]
-{
-  width: 350px;
-  background-color: #efefef;
-  color: #666;
-  border: 2px solid #ddd;
-  border-radius: 5px;
-  font-size: 20px;
-  padding: 10px;
-  box-sizing: border-box;
-}
-textarea
-{
-  width: 350px;
-  background-color: #efefef;
-  color: #666;
-  border: 2px solid #ddd;
-  border-radius: 5px;
-  font-size: 20px;
-  padding: 10px;
-  box-sizing: border-box;
-}
-input[type="submit"]
-{
-  width: 350px;
-  background-color: #c43a3a;
-  font-size: 20px;
-  color: white;
-  padding: 15px 10px;
-  margin-top: 30px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  letter-spacing: 3px;
-}
-#form
-{
-  margin-left: 3em;
-}
-input[type="submit"]:hover
-{
-  background-color: #992c2c;
-}
-input[type="text"]:focus
-{
-  background-color: #d35d5d;
-  border: 2px solid #913b3b;
-  color: white;
-}
-textarea:focus
-{
-  background-color: #d35d5d;
-  border: 2px solid #913b3b;
-  color: white;
-}
+
 
