@@ -30,10 +30,9 @@ ul > li:hover
 {
 	color: #c12c2c;
 	cursor: pointer;
-	background-color: black;
 	opacity: 1;
 }
-ul a
+ul > li
 {
 	color: white;
 	text-decoration: none;
@@ -43,15 +42,15 @@ ul a
 	height: 4em;
 	border-right: 1px dashed #c12c2c;
 }
-ul a:first-child
+ul > li:first-child
 {
 	border-left: 1px dashed #c12c2c;
 }
-ul a:hover
+ul > li:hover
 {
 	color: #c12c2c;
 }
-section
+article
 {
   max-width: 1200px;
   color: white;
