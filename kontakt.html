@@ -29,25 +29,25 @@
 
 		<article>
 			<div id="form">
-				<form id="myForm" action="wyslano.html" method="get">
+				<form id="myForm" action="wyslano.html" method="get" onsubmit="send()">
 					<br />
 					<label>Imię:</label><span style="color: red;"><sup>*</sup></span>
 					<br />
-					<input type="text" id="name" placeholder="Wpisz swoje imię"/>
+					<input type="text" id="name" placeholder="Wpisz swoje imię" onfocus="checkName()" onfocusout="checkName()"/>
 					<br /><br /> 
 					<label>Nazwisko:</label>
 					<br />
-					<input type="text" id="surname" placeholder="Wpisz swoje nazwisko" />
+					<input type="text" id="surname" placeholder="Wpisz swoje nazwisko" onfocus="checkSurname()" onfocusout="checkSurname()"/>
 					<br /><br /> 
 					<label>E-mail:</label><span style="color: red;"><sup>*</sup></span>
 					<br />
-					<input type="text" id="email" placeholder="Podaj swój email">
+					<input type="text" id="email" placeholder="Podaj swój email" onfocus="checkEmail()" onfocusout="checkEmail()">
 					<br /> <br />
-					<label>Wiadomość:</label> 
+					<label>Wiadomość:</label><span style="color: red;"><sup>*</sup></span> 
 					<br />
-					<textarea id="txtarea">Czym jesteś zainteresowany?</textarea>
+					<textarea id="txtarea" placeholder="Czym jesteś zainteresowany?" onfocus="checkMessage()" onfocusout="checkMessage()">Czym jesteś zainteresowany?</textarea>
 					<br /><br />
-					<input type="submit" id="btn" value="Wyślij" />
+					<input type="submit" id="btn" value="Wyślij" disabled="true"/>
 				</form>
 			</div>
 		</article>

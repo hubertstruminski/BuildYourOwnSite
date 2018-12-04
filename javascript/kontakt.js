@@ -1,57 +1,117 @@
 var btnSend = document.getElementById("btn");
-var name = document.getElementById("name");
-var surname = document.getElementById("surname");
-var email = document.getElementById("email");
-var txtArea = document.getElementById("txtarea");
 
-function validateForm()
+var count = 1;
+function checkName()
 {
-	var regName = /^[A-Z]{1}[a-zA-Z ]{2,}/;
-	var regSpace = /[ ]{1,}/;
-	var regEmail = /^[a-z0-9]{1,}@[a-z0-9]{1,}\.[a-z0-9]{1,}/;
+	count = 0;
 
-	if(name.value == "" || surname.value == "" || email.value == "" || txtArea.value == "" ||
-		name.value == "Wpisz swoje imię" || surname.value == "Wpisz swoje nazwisko" || email.value == "Podaj swój email" || txtArea.value == "Czym jesteś zainteresowany?"){
-		btnSend.disabled = true;
-	}else if(!regName.test(name.value) || regSpace.test(name.value)){
-		name.style.border = "2px solid red";
-		btnSend.disabled = true;
-	}else if(!regEmail.test(email.value) || regSpace.test(email.value)){
-		email.style.border = "2px solid red";
-		btnSend.disabled = true;
-	}else{
-		btnSend.disabled = false;
+	var btnSend = document.getElementById("btn");
+	btnSend.setAttribute("disabled", "true");
+	
+	var name = document.getElementById("name");
+
+	var regName = /^[A-Z]{1}[a-zA-Z ]{2,}/;
+
+	name.style.color = "#666";
+
+	if(name.value == "" || !regName.test(name.value)){
+		name.style.border = "5px solid red";
+		count++;
+	}else if(name.value != "" && regName.test(name.value)){
+		name.style.border = "5px solid green";
+		count = 0;
 	}
 }
 
-function switchButton()
+function checkEmail()
 {
-	if(name.value != "" && email.value != "" && txtArea.value != ""){
-		btnSend.disabled = false;
+	count = 0;
+
+	var btnSend = document.getElementById("btn");
+	btnSend.setAttribute("disabled", "true");
+
+	var email = document.getElementById("email");
+
+	var regEmail = /[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+/;
+
+	email.style.color = "#666";
+
+	if(email.value == "" || !regEmail.test(email.value)){
+		email.style.border = "5px solid red";
+		count++;
+	}else if(email.value != "" && regEmail.test(email.value)){
+		email.style.border = "5px solid green";
+		count = 0;
+	}
+}
+
+function checkSurname()
+{
+	var surname = document.getElementById("surname");
+
+	var btnSend = document.getElementById("btn");
+	btnSend.setAttribute("disabled", "true");
+
+	surname.style.color = "#666";
+	surname.style.border = "5px solid green";
+}
+
+function checkMessage()
+{
+	count = 0;
+
+	var btnSend = document.getElementById("btn");
+	var txtArea = document.getElementById("txtarea");
+	var name = document.getElementById("name");
+	var surname = document.getElementById("surname");
+	var email = document.getElementById("email");
+
+	btnSend.setAttribute("disabled", "true");
+
+	if(txtArea.value == ""){
+		txtArea.style.border = "5px solid red";
+		count++;
+	}else{
+		txtArea.style.border = "5px solid green";
+		count = 0;
+	}
+
+	// if(name.value != "" && email.value != "" && txtArea.value != ""){
+	// 	btnSend.style.backgroundColor = "#c43a3a";
+	// 	btnSend.removeAttribute("disabled");
+	// }
+
+	if(count == 0){
 		btnSend.style.backgroundColor = "#c43a3a";
+		btnSend.removeAttribute("disabled");
 	}
 }
 
 function init()
 {
+	var name = document.getElementById("name");
+	var surname = document.getElementById("surname");
+	var email = document.getElementById("email");
+	var txtArea = document.getElementById("txtarea");
 	name.value = "";
 	surname.value = "";
 	email.value = "";
 	txtArea.value = "";
 }
 
-function enableButton()
+function send()
 {
-	btnSend.disabled = true;
-	btnSend.style.backgroundColor = "#666";
+	var btnSend = document.getElementById("btn");
+
+	var name = document.getElementById("name");
+	var email = document.getElementById("email");
+	var txtArea = document.getElementById("txtarea");
+
 }
 
 window.onload = function()
 {
 	init();
-
-	enableButton();
-	switchButton();
 
 	var ul = document.querySelector("ul");
 
@@ -91,11 +151,5 @@ window.onload = function()
 
 	fourthLi.addEventListener("click", function(){
 		window.location = fourthLink.getAttribute("href");
-	});
-
-
-
-	btnSend.addEventListener("click", function(){
-		validateForm();
 	});
 }

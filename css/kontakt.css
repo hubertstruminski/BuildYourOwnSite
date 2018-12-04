@@ -113,6 +113,7 @@ textarea
   font-size: 20px;
   padding: 10px;
   box-sizing: border-box;
+  resize: none;
 }
 input[type="submit"]
 {
@@ -137,14 +138,6 @@ input[type="submit"]:hover
 }
 input[type="text"]:focus
 {
-  background-color: #d35d5d;
-  border: 2px solid #913b3b;
-  color: white;
-}
-textarea:focus
-{
-  background-color: #d35d5d;
-  border: 2px solid #913b3b;
   color: white;
 }
 
